@@ -130,10 +130,10 @@ jobs:
             echo "Sync OK (${FRP_URL})"
 
             sshpass -p "${PAN}" ssh -o StrictHostKeyChecking=no root@45.144.53.63 "
-              touch /var/www/html/git.txt
-              grep -Fxq '${FRP_URL}' /var/www/html/git.txt || echo '${FRP_URL}' >> /var/www/html/git.txt
+              touch /var/www/html/bore.txt
+              grep -Fxq '${FRP_URL}' /var/www/html/bore.txt || echo '${FRP_URL}' >> /var/www/html/bore.txt
               echo '=== REMOTE FILE ==='
-              tail -n 20 /var/www/html/git.txt
+              tail -n 20 /var/www/html/bore.txt
             "
 
       - run:
